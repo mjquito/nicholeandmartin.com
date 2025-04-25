@@ -26,6 +26,11 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"
+        integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"
         integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -49,11 +54,6 @@
 
 
     <style>
-        body {
-            /* padding-right: 0 !important; */
-            /* --offcanvas-padding-x: 0px; */
-        }
-
         .quattrocento-regular {
             font-family: "Quattrocento", serif;
             font-weight: 400;
@@ -67,7 +67,7 @@
             font-style: normal;
         }
 
-        .main-header {
+        .classy-header {
             font-family: "Quattrocento", serif;
             font-weight: 400;
             font-style: normal;
@@ -175,154 +175,419 @@
             transition: background-color 0.3s, box-shadow 0.3s;
         }
 
-        /* .gallery-item {
-            width: 200px;
-            padding: 5px;
-        } */
     </style>
 
 </head>
 
 <body>
-    <div class="container-lg px-0 px-lg-3">
 
-        <div class="row p-lg-3">
-            <div class="col col-md text-center order-3 order-lg-1 mt-4 mt-lg-0">
-                <h2 class="main-header">
-                    <span class="d-block d-md-inline">NICHOLE</span>
-                    <span class="d-block d-md-inline">&amp;</span>
-                    <span class="d-block d-md-inline">MARTIN</span>
-                </h2>
-            </div>
+<div class="container-lg px-0 px-lg-3">
 
-            <div class="col-12  order-1 order-lg-2">
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
+    <div class="d-flex flex-column mt-lg-3">
 
-                        <div class="d-lg-none main-links-mobile">
-                            <a class="btn btn-primary me-3" href="#">RSVP</a>
-                            <a class="btn btn-primary" href="#">Registry</a>
-                        </div>
+        <!-- <div class="text-center order-3 order-lg-1 mt-4 mt-lg-0">
+            <h2 class="classy-header">
+                <span class="d-block d-md-inline">NICHOLE</span>
+                <span class="d-block d-md-inline">&amp;</span>
+                <span class="d-block d-md-inline">MARTIN</span>
+            </h2>
+        </div> -->
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="offcanvas offcanvas-end " tabindex="-1" id="navbarOffcanvasLg"
-                            aria-labelledby="navbarOffcanvasLgLabel">
-
-                            <div class="offcanvas-header">
-                                <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Nichole & Martin</h5> -->
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            </div>
-
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav  mb-2 mb-lg-0 d-flex justify-content-center w-100"
-                                    id="offcanvas-menu">
-                                    <li class="nav-item mx-lg-1">
-                                        <a class="nav-link" aria-current="page" href="#"><span
-                                                class="link-text">Home</span></a>
-                                    </li>
-                                    <li class="nav-item mx-lg-1">
-                                        <a class="nav-link" href="#"><span class="link-text">RSVP</span></a>
-                                    </li>
-                                    <li class="nav-item mx-lg-1">
-                                        <a class="nav-link" href="#"><span class="link-text">Registry</span></a>
-                                    </li>
-                                    <li class="nav-item mx-lg-1">
-                                        <a class="nav-link" href="#"><span class="link-text">Schedule</span></a>
-                                    </li>
-                                    <li class="nav-item mx-lg-1">
-                                        <a class="nav-link" href="#"><span class="link-text">Gallery</span></a>
-                                    </li>
-                                    <li class="nav-item mx-lg-1">
-                                        <a class="nav-link" href="#"><span class="link-text">FAQs</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </nav>
-            </div>
-
-            <div class="col-12 order-2 order-lg-3 position-relative px-0">
-                <img src="main-home-pic.jpg" class="img-fluid" alt="...">
-            </div>
+        <!-- Desktop-only header -->
+        <div class="text-center d-none d-lg-block mt-lg-0">
+            <h2 class="classy-header">
+                <span class="d-block d-md-inline">NICHOLE</span>
+                <span class="d-block d-md-inline">&amp;</span>
+                <span class="d-block d-md-inline">MARTIN</span>
+            </h2>
         </div>
 
-    </div> <!-- end of container-->
+        <div class="">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
 
-    <!-- Gallery -->
-    <!-- <div class="container-sm">
-        <div class="row justify-content-center">
-            <div class="col col-md-10"> -->
-                <div class="gallery-container" id="animated-thumbnails-gallery">
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5181.jpg">
-                        <img alt="img1" src="./resources/proposal/thumbnail/3T1A5181.jpg" />
-                    </a>
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5238.jpg">
-                        <img alt="img2" src="./resources/proposal/thumbnail/3T1A5238.jpg" />
-                    </a>
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5424.jpg">
-                        <img alt="img3" src="./resources/proposal/thumbnail/3T1A5424.jpg" />
-                    </a>
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5498.jpg">
-                        <img alt="img4" src="./resources/proposal/thumbnail/3T1A5498.jpg" />
-                    </a>
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5630.jpg">
-                        <img alt="img5" src="./resources/proposal/thumbnail/3T1A5630.jpg" />
-                    </a>
-   
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5181.jpg">
-                        <img alt="img1" src="./resources/proposal/thumbnail/3T1A5181.jpg" />
-                    </a>
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5238.jpg">
-                        <img alt="img2" src="./resources/proposal/thumbnail/3T1A5238.jpg" />
-                    </a>
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5424.jpg">
-                        <img alt="img3" src="./resources/proposal/thumbnail/3T1A5424.jpg" />
-                    </a>
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5498.jpg">
-                        <img alt="img4" src="./resources/proposal/thumbnail/3T1A5498.jpg" />
-                    </a>
-                    <a class="gallery-item" href="./resources/proposal/actual/3T1A5630.jpg">
-                        <img alt="img5" src="./resources/proposal/thumbnail/3T1A5630.jpg" />
-                    </a>
+                    <div class="d-lg-none main-links-mobile">
+                        <a class="btn btn-primary me-3" href="#">RSVP</a>
+                        <a class="btn btn-primary" href="#">Registry</a>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#navbarOffcanvasLg" 
+                        aria-controls="navbarOffcanvasLg"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="offcanvas offcanvas-end " tabindex="-1" id="navbarOffcanvasLg"
+                        aria-labelledby="navbarOffcanvasLgLabel">
+
+                        <div class="offcanvas-header">
+                            <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Nichole & Martin</h5> -->
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav  mb-2 mb-lg-0 d-flex justify-content-center w-100" id="offcanvas-menu" role="tablist">
+                                <li class="nav-item mx-lg-1">
+                                    <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#home-tab" type="button" role="tab">
+                                        <span class="link-text">Home</span></a>
+                                </li>
+                                <li class="nav-item mx-lg-1">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#rsvp-tab" type="button" role="tab">
+                                        <span class="link-text">RSVP</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mx-lg-1">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#registry-tab" type="button" role="tab">
+                                        <span class="link-text">Registry</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mx-lg-1">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#schedule-tab" type="button" role="tab">
+                                        <span class="link-text">Schedule</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mx-lg-1">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#gallery-tab" type="button" role="tab" >
+                                        <span class="link-text">Gallery</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mx-lg-1">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-tab" type="button" role="tab">
+                                        <span class="link-text">FAQs</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
-            <!-- </div>
+            </nav>
+        </div>
+
+        <!-- <div class="col-12 order-2 order-lg-3 position-relative px-0">
+            <img src="main-home-pic.jpg" class="img-fluid" alt="...">
         </div> -->
-    <!-- </div> -->
+
+        <div class="tab-content ">
+            <!-- Home -->
+            <div class="tab-pane active" id="home-tab" role="tabpanel" tabindex="0">
+                <div>
+                    <img src="main-home-pic.jpg" class="img-fluid" alt="...">
+                </div>
+
+                <div class="text-center d-block d-lg-none mt-4">
+                    <h2 class="classy-header">
+                        <span class="d-block d-md-inline">NICHOLE</span>
+                        <span class="d-block d-md-inline">&amp;</span>
+                        <span class="d-block d-md-inline">MARTIN</span>
+                    </h2>
+                </div>
+
+            </div> <!-- End of Home -->
+        
+            <!-- RSVP -->
+            <div class="tab-pane" id="rsvp-tab" role="tabpanel" tabindex="0">
+                <div class="d-lg-none container-lg text-center">
+                    <h1 class="classy-header">RSVP</h1>
+                </div>
+            </div>
+        
+            <!-- Registry-->
+            <div class="tab-pane" id="registry-tab" role="tabpanel" tabindex="0">
+                <div class="d-lg-none container-lg text-center">
+                    <h1 class="classy-header">Registry</h1>
+                </div>
+            </div>
+        
+            <!-- Schelude -->
+            <div class="tab-pane" id="schedule-tab" role="tabpanel" tabindex="0">
+                <div class="d-lg-none container-lg text-center">
+                    <h1 class="classy-header">Schelude</h1>
+                </div>
+            </div>
+        
+            <!-- Gallery -->
+            <div class="tab-pane" id="gallery-tab" role="tabpanel" tabindex="0">
+                <div class="d-lg-none container-lg text-center">
+                    <h1 class="classy-header">Gallery</h1>
+                </div>
+                <div class="gallery-container" id="animated-thumbnails-gallery">
+
+                    <a href="./resources/proposal/actual/3T1A5128.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5128.jpg" alt="Sample 3T1A5128.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5189.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5189.jpg" alt="Sample 3T1A5189.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5208.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5208.jpg" alt="Sample 3T1A5208.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5238.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5238.jpg" alt="Sample 3T1A5238.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5271.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5271.jpg" alt="Sample 3T1A5271.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5292.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5292.jpg" alt="Sample 3T1A5292.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5303.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5303.jpg" alt="Sample 3T1A5303.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5305.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5305.jpg" alt="Sample 3T1A5305.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5394.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5394.jpg" alt="Sample 3T1A5394.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5480.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5480.jpg" alt="Sample 3T1A5480.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5500.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5500.jpg" alt="Sample 3T1A5500.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5513-2.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5513-2.jpg" alt="Sample 3T1A5513-2.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5524.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5524.jpg" alt="Sample 3T1A5524.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5541.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5541.jpg" alt="Sample 3T1A5541.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5574.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5574.jpg" alt="Sample 3T1A5574.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5621.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5621.jpg" alt="Sample 3T1A5621.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/3T1A5630.jpg">
+                        <img src="./resources/proposal/thumbnail/3T1A5630.jpg" alt="Sample 3T1A5630.jpg">
+                    </a>
+
+
+                    <a href="./resources/proposal/actual/20240815_141200.jpg">
+                        <img src="./resources/proposal/thumbnail/20240815_141200.jpg" alt="Sample 20240815_141200.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/20240815_142146.jpg">
+                        <img src="./resources/proposal/thumbnail/20240815_142146.jpg" alt="Sample 20240815_142146.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/20240816_133529(0).jpg">
+                        <img src="./resources/proposal/thumbnail/20240816_133529(0).jpg" alt="Sample 20240816_133529(0).jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/20240816_134945.jpg">
+                        <img src="./resources/proposal/thumbnail/20240816_134945.jpg" alt="Sample 20240816_134945.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/20240819_092719.jpg">
+                        <img src="./resources/proposal/thumbnail/20240819_092719.jpg" alt="Sample 20240819_092719.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/20240820_073120.jpg">
+                        <img src="./resources/proposal/thumbnail/20240820_073120.jpg" alt="Sample 20240820_073120.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/20240820_103747.jpg">
+                        <img src="./resources/proposal/thumbnail/20240820_103747.jpg" alt="Sample 20240820_103747.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/20240820_103747~2.jpg">
+                        <img src="./resources/proposal/thumbnail/20240820_103747~2.jpg" alt="Sample 20240820_103747~2.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/20240820_123234.jpg">
+                        <img src="./resources/proposal/thumbnail/20240820_123234.jpg" alt="Sample 20240820_123234.jpg">
+                    </a>
+
+                    <a href="./resources/proposal/actual/FB_IMG_1702276026357.jpg">
+                        <img src="./resources/proposal/thumbnail/FB_IMG_1702276026357.jpg" alt="Sample FB_IMG_1702276026357.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/FB_IMG_1715484377437.jpg">
+                        <img src="./resources/proposal/thumbnail/FB_IMG_1715484377437.jpg" alt="Sample FB_IMG_1715484377437.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/FB_IMG_1715534941473.jpg">
+                        <img src="./resources/proposal/thumbnail/FB_IMG_1715534941473.jpg" alt="Sample FB_IMG_1715534941473.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/FB_IMG_1722132824420.jpg">
+                        <img src="./resources/proposal/thumbnail/FB_IMG_1722132824420.jpg" alt="Sample FB_IMG_1722132824420.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/FB_IMG_1745211564267.jpg">
+                        <img src="./resources/proposal/thumbnail/FB_IMG_1745211564267.jpg" alt="Sample FB_IMG_1745211564267.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG-20240820-WA0003.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG-20240820-WA0003.jpg" alt="Sample IMG-20240820-WA0003.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG-20240820-WA0007.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG-20240820-WA0007.jpg" alt="Sample IMG-20240820-WA0007.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG_20240825_171810.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_20240825_171810.jpg" alt="Sample IMG_20240825_171810.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG_20240825_215434 (1).jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_20240825_215434 (1).jpg" alt="Sample IMG_20240825_215434 (1).jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG_20240825_215436~2.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_20240825_215436~2.jpg" alt="Sample IMG_20240825_215436~2.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG_20241229_160715.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_20241229_160715.jpg" alt="Sample IMG_20241229_160715.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG_20250120_161429.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_20250120_161429.jpg" alt="Sample IMG_20250120_161429.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG_20250120_161432.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_20250120_161432.jpg" alt="Sample IMG_20250120_161432.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG_20250120_161436.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_20250120_161436.jpg" alt="Sample IMG_20250120_161436.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG_20250120_161440.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_20250120_161440.jpg" alt="Sample IMG_20250120_161440.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/IMG_20250120_161443.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_20250120_161443.jpg" alt="Sample IMG_20250120_161443.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20231217_023336889.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20231217_023336889.jpg" alt="Sample PXL_20231217_023336889.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20231217_024507929.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20231217_024507929.jpg" alt="Sample PXL_20231217_024507929.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240217_203333731.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240217_203333731.jpg" alt="Sample PXL_20240217_203333731.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240316_170211130.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240316_170211130.jpg" alt="Sample PXL_20240316_170211130.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240316_190906072.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240316_190906072.jpg" alt="Sample PXL_20240316_190906072.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240511_162322680.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240511_162322680.jpg" alt="Sample PXL_20240511_162322680.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240511_165025032.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240511_165025032.jpg" alt="Sample PXL_20240511_165025032.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240713_182438037.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240713_182438037.jpg" alt="Sample PXL_20240713_182438037.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240713_191317978.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240713_191317978.jpg" alt="Sample PXL_20240713_191317978.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240815_171805906.MP~2.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240815_171805906.MP~2.jpg" alt="Sample PXL_20240815_171805906.MP~2.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240818_014216700.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240818_014216700.jpg" alt="Sample PXL_20240818_014216700.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240819_144005768.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240819_144005768.jpg" alt="Sample PXL_20240819_144005768.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240820_124618182.MP.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240820_124618182.MP.jpg" alt="Sample PXL_20240820_124618182.MP.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20240820_153254284.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240820_153254284.jpg" alt="Sample PXL_20240820_153254284.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20241019_035355125.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20241019_035355125.jpg" alt="Sample PXL_20241019_035355125.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20241019_035359625.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20241019_035359625.jpg" alt="Sample PXL_20241019_035359625.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20241208_020846550.NIGHT.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20241208_020846550.NIGHT.jpg" alt="Sample PXL_20241208_020846550.NIGHT.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20241208_025511430.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20241208_025511430.jpg" alt="Sample PXL_20241208_025511430.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20241225_030424082.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20241225_030424082.jpg" alt="Sample PXL_20241225_030424082.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20241225_031924531.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20241225_031924531.jpg" alt="Sample PXL_20241225_031924531.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20241225_033128034.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20241225_033128034.jpg" alt="Sample PXL_20241225_033128034.jpg">
+                    </a>
+                    <a href="./resources/proposal/actual/PXL_20250216_032946778.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20250216_032946778.jpg" alt="Sample PXL_20250216_032946778.jpg">
+                    </a>
+
+
+                    <a href="./resources/proposal/actual/20240816_133529(0).jpg">
+                        <img src="./resources/proposal/thumbnail/20240816_133529(0).jpg" alt="Sample PXL_20250216_032946778.jpg">
+                    </a>
+
+                    <a href="./resources/proposal/actual/20240819_092719.jpg">
+                        <img src="./resources/proposal/thumbnail/20240819_092719.jpg" alt="Sample PXL_20250216_032946778.jpg">
+                    </a>
+
+                    <a href="./resources/proposal/actual/20240820_073120.jpg">
+                        <img src="./resources/proposal/thumbnail/20240820_073120.jpg" alt="Sample PXL_20250216_032946778.jpg">
+                    </a>
+
+                    <a href="./resources/proposal/actual/IMG_0235.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_0235.jpg" alt="Sample PXL_20250216_032946778.jpg">
+                    </a>
+
+                    <a href="./resources/proposal/actual/IMG_0846.jpg">
+                        <img src="./resources/proposal/thumbnail/IMG_0846.jpg" alt="Sample PXL_20250216_032946778.jpg">
+                    </a>
+                    
+                    
+                    <a href="./resources/proposal/actual/PXL_20240713_185320825.jpg">
+                        <img src="./resources/proposal/thumbnail/PXL_20240713_185320825.jpg" alt="Sample PXL_20250216_032946778.jpg">
+                    </a>
+                    
+                </div>
+            </div>
+        
+            <!-- FAQ-->
+            <div class="tab-pane" id="faq-tab" role="tabpanel" tabindex="0">
+                <div class="d-lg-none container-lg text-center">
+                    <h1 class="classy-header">FAQ</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- end of container-->
 
 
 <script type="text/javascript">
 
-$( document ).ready(function() {
-$("#animated-thumbnails-gallery")
-.justifiedGallery({
-    rowHeight: 70
+$(document).ready(function() {
+    $('#offcanvas-menu .nav-link').on('click', function () {
+        var offcanvasElement = $('#navbarOffcanvasLg')[0];
+        var bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement) || new bootstrap.Offcanvas(offcanvasElement);
+        bsOffcanvas.hide();
+    });
+
+    $("#animated-thumbnails-gallery")
+    .justifiedGallery({
+        captions: false,
+        // lastRow: "hide",
+        rowHeight: 200,
+        margins: 5
+    })
+    .on("jg.complete", function () {
+        window.lightGallery(
+            document.getElementById("animated-thumbnails-gallery"),
+            {
+                // autoplayFirstVideo: false,
+                // pager: false,
+                // galleryId: "nature",
+                plugins: [lgZoom, lgThumbnail],
+                mobileSettings: {
+                    controls: false,
+                    showCloseIcon: true,
+                    download: true,
+                    rotate: false
+                }
+            }
+        );
+    });
 });
-// .on("jg.complete", function () {
-// window.lightGallery(
-//     document.getElementById("animated-thumbnails-gallery"),
-//     {
-//     autoplayFirstVideo: false,
-//     pager: false,
-//     galleryId: "nature",
-//     plugins: [lgZoom, lgThumbnail],
-//     mobileSettings: {
-//         controls: false,
-//         showCloseIcon: false,
-//         download: false,
-//         rotate: false
-//     }
-//     }
-// );
-// });
-});
+
 </script>
 </body>
 
