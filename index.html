@@ -54,6 +54,13 @@
 
 
     <style>
+        /* body {
+            background: url('./resources/left-flower.png') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.2;
+        } */
+
+
         .quattrocento-regular {
             font-family: "Quattrocento", serif;
             font-weight: 400;
@@ -67,6 +74,25 @@
             font-style: normal;
         }
 
+        .libre-baskerville-regular {
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .libre-baskerville-bold {
+            font-family: "Libre Baskerville", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .libre-baskerville-regular-italic {
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+
         .classy-header {
             font-family: "Quattrocento", serif;
             font-weight: 400;
@@ -74,13 +100,32 @@
             text-transform: uppercase;
             line-height: 1.1;
             letter-spacing: 4px;
-            font-size: 42px;
         }
 
         .navbar {
             font-family: "Libre Baskerville" !important;
             --bs-navbar-color: inherit;
             --bs-navbar-active-color: inherit;
+        }
+
+        #offcanvas-menu {
+            font-size: 19px;
+        }
+
+        .header-h1 {
+            font-size: 48px !important;
+        }
+
+        .header-h2 {
+            font-size: 40px !important;
+        }
+
+        .mt-6 {
+            margin-top: 4rem !important;
+        }
+
+        .mt-7 {
+            margin-top: 5rem !important;
         }
 
         @media (max-width: 991.98px) {
@@ -119,6 +164,10 @@
 
             #offcanvas-menu li a {
                 padding: 0px;
+            }
+
+            .header-h1 {
+                font-size: 57px !important;
             }
         }
 
@@ -174,421 +223,823 @@
             animation: generative-ai-pulse 2s infinite;
             transition: background-color 0.3s, box-shadow 0.3s;
         }
-
     </style>
 
 </head>
 
 <body>
 
-<div class="container-lg px-0 px-lg-3">
+    <div class="container-lg px-0 px-lg-3">
 
-    <div class="d-flex flex-column mt-lg-3">
+        <div class="d-flex flex-column mt-lg-3">
 
-        <!-- <div class="text-center order-3 order-lg-1 mt-4 mt-lg-0">
-            <h2 class="classy-header">
-                <span class="d-block d-md-inline">NICHOLE</span>
-                <span class="d-block d-md-inline">&amp;</span>
-                <span class="d-block d-md-inline">MARTIN</span>
-            </h2>
-        </div> -->
+            <!-- Desktop-only header -->
+            <div class="text-center d-none d-lg-block mt-lg-0">
+                <h1 class="classy-header header-h1 ">
+                    <span class="d-block d-md-inline">NICHOLE</span>
+                    <span class="d-block d-md-inline">&amp;</span>
+                    <span class="d-block d-md-inline">MARTIN</span>
+                </h1>
+            </div>
 
-        <!-- Desktop-only header -->
-        <div class="text-center d-none d-lg-block mt-lg-0">
-            <h2 class="classy-header">
-                <span class="d-block d-md-inline">NICHOLE</span>
-                <span class="d-block d-md-inline">&amp;</span>
-                <span class="d-block d-md-inline">MARTIN</span>
-            </h2>
-        </div>
+            <!-- nav bar -->
+            <div class="mt-lg-3">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
 
-        <div class="">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-
-                    <div class="d-lg-none main-links-mobile">
-                        <a class="btn btn-primary me-3" href="#">RSVP</a>
-                        <a class="btn btn-primary" href="#">Registry</a>
-                    </div>
-
-                    <button class="navbar-toggler" type="button" 
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#navbarOffcanvasLg" 
-                        aria-controls="navbarOffcanvasLg"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="offcanvas offcanvas-end " tabindex="-1" id="navbarOffcanvasLg"
-                        aria-labelledby="navbarOffcanvasLgLabel">
-
-                        <div class="offcanvas-header">
-                            <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Nichole & Martin</h5> -->
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
+                        <div class="d-lg-none main-links-mobile">
+                            <!-- <a class="btn btn-primary me-3" href="#">Home</a> -->
+                            <a class="btn btn-primary me-3" href="#">RSVP</a>
+                            <a class="btn btn-primary" href="#">Registry</a>
                         </div>
 
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav  mb-2 mb-lg-0 d-flex justify-content-center w-100" id="offcanvas-menu" role="tablist">
-                                <li class="nav-item mx-lg-1">
-                                    <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#home-tab" type="button" role="tab">
-                                        <span class="link-text">Home</span></a>
-                                </li>
-                                <li class="nav-item mx-lg-1">
-                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#rsvp-tab" type="button" role="tab">
-                                        <span class="link-text">RSVP</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item mx-lg-1">
-                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#registry-tab" type="button" role="tab">
-                                        <span class="link-text">Registry</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item mx-lg-1">
-                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#schedule-tab" type="button" role="tab">
-                                        <span class="link-text">Schedule</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item mx-lg-1">
-                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#gallery-tab" type="button" role="tab" >
-                                        <span class="link-text">Gallery</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item mx-lg-1">
-                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-tab" type="button" role="tab">
-                                        <span class="link-text">FAQs</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="offcanvas offcanvas-end " tabindex="-1" id="navbarOffcanvasLg"
+                            aria-labelledby="navbarOffcanvasLgLabel">
+
+                            <div class="offcanvas-header">
+                                <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Nichole & Martin</h5> -->
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav  mb-2 mb-lg-0 d-flex justify-content-center w-100"
+                                    id="offcanvas-menu" role="tablist">
+                                    <li class="nav-item mx-lg-1">
+                                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#home-tab"
+                                            type="button" role="tab">
+                                            <span class="link-text">Home</span></a>
+                                    </li>
+                                    <li class="nav-item mx-lg-1">
+                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#rsvp-tab"
+                                            type="button" role="tab">
+                                            <span class="link-text">RSVP</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mx-lg-1">
+                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#registry-tab"
+                                            type="button" role="tab">
+                                            <span class="link-text">Registry</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mx-lg-1">
+                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#schedule-tab"
+                                            type="button" role="tab">
+                                            <span class="link-text">Schedule</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mx-lg-1">
+                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#gallery-tab"
+                                            type="button" role="tab">
+                                            <span class="link-text">Gallery</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mx-lg-1">
+                                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#faq-tab" type="button"
+                                            role="tab">
+                                            <span class="link-text">FAQs</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- tabs content -->
+            <div class="tab-content ">
+                <!-- Home -->
+                <div class="tab-pane active" id="home-tab" role="tabpanel" tabindex="0">
+                    <div>
+                        <img src="main-home-pic.jpg" class="img-fluid" alt="...">
+                    </div>
+
+                    <div class="text-center d-block d-lg-none mt-5">
+                        <h1 class="classy-header header-h1">
+                            <span class="d-block d-lg-inline">NICHOLE</span>
+                            <span class="d-block d-lg-inline">WILSON</span>
+                            <span class="d-block d-lg-inline fs-1 my-3">&amp;</span>
+                            <span class="d-block d-lg-inline">MARTIN</span>
+                            <span class="d-block d-lg-inline">QUITO</span>
+                            </h2>
+                    </div>
+
+                    <div class="text-center mt-7">
+                        <h2 class="header-h2 classy-header">Wedding Day</h2>
+
+                        <div class="libre-baskerville-regular fs-5">
+                            <p>August 30, 2025</p>
+                            <p>Sealed for time and all eternity in the Idaho Falls Temple in Idaho.</p>
+                            <!-- <address>
+                            <a href="https://www.google.com/maps/search/?api=1&query=1000+Memorial+Dr,+Idaho+Falls,+ID+83402" target="_blank" class="text-decoration-none">
+                                1000 Memorial Dr,<br>
+                                Idaho Falls, ID 83402
+                            </a>
+                        </address> -->
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <h2 class="header-h2 classy-header">
+                            <span class="d-block d-lg-inline">Idaho</span>
+                            <span class="d-block d-lg-inline">Reception</span>
+                        </h2>
+
+                        <div class="libre-baskerville-regular fs-5">
+                            <p>August 30, 2025</p>
+                            <p>5:30 pm - 9:00pm</p>
+                            <address>
+                                <a href="https://www.google.com/maps/search/?api=1&query=1155+1st+St,+Idaho+Falls,+ID+83401"
+                                    target="_blank" class="text-decoration-none">
+                                    1155 1st St,<br>
+                                    Idaho Falls, ID 83401
+                                </a>
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <h2 class="header-h2 classy-header">
+                            <span class="d-block d-lg-inline">Maryland</span>
+                            <span class="d-block d-lg-inline">Reception</span>
+                        </h2>
+
+                        <div class="libre-baskerville-regular fs-5">
+                            <p>September 13, 2025</p>
+                            <p>5:30 pm - 9:00pm</p>
+                            <address>
+                                <a href="https://www.google.com/maps/search/?api=1&query=1155+1st+St,+Idaho+Falls,+ID+83401"
+                                    target="_blank" class="text-decoration-none">
+                                    10000 Stoneybrook Dr,<br>
+                                    Kensington, MD 20895
+                                </a>
+                            </address>
+                        </div>
+                    </div>
+
+                </div> <!-- End of Home -->
+
+                <!-- RSVP -->
+                <div class="tab-pane p-4 p-lg-0" id="rsvp-tab" role="tabpanel" tabindex="0">
+                    <div class="d-lg-none container-lg text-center mt-4">
+                        <h2 class="classy-header header-h2">RSVP</h2>
+                    </div>
+
+                    <div class="text-center mt-5 libre-baskerville-regular-italic fs-5">
+                        <p>Formal invitations and RSVP details coming soon — we can’t wait to celebrate with you!</p>
+                    </div>
+                </div>
+
+                <!-- Registry-->
+                <div class="tab-pane" id="registry-tab" role="tabpanel" tabindex="0">
+                    <div class="d-lg-none container-lg text-center mt-4">
+                        <h2 class="classy-header header-h2">Registry</h2>
+                    </div>
+
+                    <div class="container text-center mt-5 libre-baskerville-regular fs-5">
+                        <p class="mb-4">
+                            We are grateful to have you celebrate this special time with us. 
+                            Our registries and other gift options are listed below. 
+                            Your love and support mean the world!
+                        </p>
+                    
+                        <div class="d-flex flex-column align-items-center gap-3 mt-4">
+                    
+                            <a href="https://www.amazon.com/registries" target="_blank" class="btn btn-outline-primary px-4 py-2 d-flex align-items-center gap-2" style="font-size: 1.2rem;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="height: 20px;"> 
+                                Amazon Registry
+                            </a>
+                    
+                            <a href="https://www.target.com/gift-registry/" target="_blank" class="btn btn-outline-primary px-4 py-2 d-flex align-items-center gap-2" style="font-size: 1.2rem;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg" alt="Target" style="height: 20px;"> 
+                                Target Registry
+                            </a>
+                    
+                            <a href="https://account.venmo.com/u/yourvenmousername" target="_blank" class="btn btn-outline-primary px-4 py-2 d-flex align-items-center gap-2" style="font-size: 1.2rem;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Venmo_Logo.svg/250px-Venmo_Logo.svg.png" alt="Venmo" style="height: 20px;">
+                                Venmo
+                            </a>
+                    
+                            <div class="btn btn-outline-primary px-4 py-2 d-flex align-items-center gap-2" style="font-size: 1.2rem; pointer-events: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4z"/>
+                                    <path d="M0 4.697v7.104l5.803-3.48L0 4.697zM6.761 8.83l-6.761 4.059V12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-.112l-6.761-4.059L8 9.583l-1.239-.753zM16 4.697l-5.803 3.624L16 11.801V4.697z"/>
+                                </svg>
+                                Mail a Check<br>
+                                <small>Martin J Quito<br>679 Troy Ave<br>Idaho Falls, ID 83402</small>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <!-- Schelude -->
+                <div class="tab-pane" id="schedule-tab" role="tabpanel" tabindex="0">
+                    <div class="d-lg-none container-lg text-center mt-4">
+                        <h2 class="classy-header header-h2">Schelude</h2>
+                    </div>
+
+                    <div class="container mt-5 libre-baskerville-regular fs-5">
+
+                        <!-- Idaho Events -->
+                        <div class="text-center mb-5">
+                            <h3 class="header-h2 classy-header">
+                                <span class="d-block d-lg-inline">Idaho Falls, Idaho</span>
+                                <span class="d-block d-lg-inline">Events</span>
+                            </h3>
+                            <p>August 30, 2025</p>
+                            <div class="text-start mx-auto" style="max-width: 500px;">
+                                <ul class="list-unstyled">
+                                    <li><strong>Morning:</strong> Temple Sealing at the Idaho Falls Temple (Time TBD)</li>
+                                    <li><strong>5:30 PM:</strong> Reception begins</li>
+                                    <li><strong>6:00 PM:</strong> Dinner is served</li>
+                                    <li><strong>7:00 PM:</strong> Cake cutting and speeches</li>
+                                    <li><strong>8:00 PM:</strong> Dancing and mingling</li>
+                                    <li><strong>9:00 PM:</strong> Reception ends</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <!-- Maryland Events -->
+                        <div class="text-center">
+                            <h3 class="header-h2 classy-header">
+                                <span class="d-block d-lg-inline">Kensington, Maryland</span>
+                                <span class="d-block d-lg-inline">Events</span>
+                            </h3>
+                            <p>September 13, 2025</p>
+                            <div class="text-start mx-auto" style="max-width: 500px;">
+                                <ul class="list-unstyled">
+                                    <li><strong>5:30 PM:</strong> Reception begins</li>
+                                    <li><strong>6:00 PM:</strong> Dinner is served</li>
+                                    <li><strong>7:00 PM:</strong> Cake cutting and speeches</li>
+                                    <li><strong>8:00 PM:</strong> Dancing and mingling</li>
+                                    <li><strong>9:00 PM:</strong> Reception ends</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                    </div>
+
+                </div>
+
+                <!-- Gallery -->
+                <div class="tab-pane" id="gallery-tab" role="tabpanel" tabindex="0">
+                    <div class="d-lg-none container-lg text-center mt-4">
+                        <h2 class="classy-header header-h2">Gallery</h2>
+                    </div>
+                    <div class="gallery-container" id="animated-thumbnails-gallery">
+
+                        <a href="./resources/proposal/actual/3T1A5128.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5128.jpg" alt="Sample 3T1A5128.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5189.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5189.jpg" alt="Sample 3T1A5189.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5208.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5208.jpg" alt="Sample 3T1A5208.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5238.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5238.jpg" alt="Sample 3T1A5238.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5271.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5271.jpg" alt="Sample 3T1A5271.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5292.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5292.jpg" alt="Sample 3T1A5292.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5303.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5303.jpg" alt="Sample 3T1A5303.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5305.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5305.jpg" alt="Sample 3T1A5305.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5394.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5394.jpg" alt="Sample 3T1A5394.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5480.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5480.jpg" alt="Sample 3T1A5480.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5500.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5500.jpg" alt="Sample 3T1A5500.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5513-2.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5513-2.jpg" alt="Sample 3T1A5513-2.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5524.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5524.jpg" alt="Sample 3T1A5524.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5541.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5541.jpg" alt="Sample 3T1A5541.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5574.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5574.jpg" alt="Sample 3T1A5574.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5621.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5621.jpg" alt="Sample 3T1A5621.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/3T1A5630.jpg">
+                            <img src="./resources/proposal/thumbnail/3T1A5630.jpg" alt="Sample 3T1A5630.jpg">
+                        </a>
+
+
+                        <a href="./resources/proposal/actual/20240815_141200.jpg">
+                            <img src="./resources/proposal/thumbnail/20240815_141200.jpg"
+                                alt="Sample 20240815_141200.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/20240815_142146.jpg">
+                            <img src="./resources/proposal/thumbnail/20240815_142146.jpg"
+                                alt="Sample 20240815_142146.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/20240816_133529(0).jpg">
+                            <img src="./resources/proposal/thumbnail/20240816_133529(0).jpg"
+                                alt="Sample 20240816_133529(0).jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/20240816_134945.jpg">
+                            <img src="./resources/proposal/thumbnail/20240816_134945.jpg"
+                                alt="Sample 20240816_134945.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/20240819_092719.jpg">
+                            <img src="./resources/proposal/thumbnail/20240819_092719.jpg"
+                                alt="Sample 20240819_092719.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/20240820_073120.jpg">
+                            <img src="./resources/proposal/thumbnail/20240820_073120.jpg"
+                                alt="Sample 20240820_073120.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/20240820_103747.jpg">
+                            <img src="./resources/proposal/thumbnail/20240820_103747.jpg"
+                                alt="Sample 20240820_103747.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/20240820_103747~2.jpg">
+                            <img src="./resources/proposal/thumbnail/20240820_103747~2.jpg"
+                                alt="Sample 20240820_103747~2.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/20240820_123234.jpg">
+                            <img src="./resources/proposal/thumbnail/20240820_123234.jpg"
+                                alt="Sample 20240820_123234.jpg">
+                        </a>
+
+                        <a href="./resources/proposal/actual/FB_IMG_1702276026357.jpg">
+                            <img src="./resources/proposal/thumbnail/FB_IMG_1702276026357.jpg"
+                                alt="Sample FB_IMG_1702276026357.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/FB_IMG_1715484377437.jpg">
+                            <img src="./resources/proposal/thumbnail/FB_IMG_1715484377437.jpg"
+                                alt="Sample FB_IMG_1715484377437.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/FB_IMG_1715534941473.jpg">
+                            <img src="./resources/proposal/thumbnail/FB_IMG_1715534941473.jpg"
+                                alt="Sample FB_IMG_1715534941473.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/FB_IMG_1722132824420.jpg">
+                            <img src="./resources/proposal/thumbnail/FB_IMG_1722132824420.jpg"
+                                alt="Sample FB_IMG_1722132824420.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/FB_IMG_1745211564267.jpg">
+                            <img src="./resources/proposal/thumbnail/FB_IMG_1745211564267.jpg"
+                                alt="Sample FB_IMG_1745211564267.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG-20240820-WA0003.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG-20240820-WA0003.jpg"
+                                alt="Sample IMG-20240820-WA0003.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG-20240820-WA0007.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG-20240820-WA0007.jpg"
+                                alt="Sample IMG-20240820-WA0007.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG_20240825_171810.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_20240825_171810.jpg"
+                                alt="Sample IMG_20240825_171810.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG_20240825_215434 (1).jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_20240825_215434 (1).jpg"
+                                alt="Sample IMG_20240825_215434 (1).jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG_20240825_215436~2.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_20240825_215436~2.jpg"
+                                alt="Sample IMG_20240825_215436~2.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG_20241229_160715.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_20241229_160715.jpg"
+                                alt="Sample IMG_20241229_160715.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG_20250120_161429.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_20250120_161429.jpg"
+                                alt="Sample IMG_20250120_161429.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG_20250120_161432.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_20250120_161432.jpg"
+                                alt="Sample IMG_20250120_161432.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG_20250120_161436.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_20250120_161436.jpg"
+                                alt="Sample IMG_20250120_161436.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG_20250120_161440.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_20250120_161440.jpg"
+                                alt="Sample IMG_20250120_161440.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/IMG_20250120_161443.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_20250120_161443.jpg"
+                                alt="Sample IMG_20250120_161443.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20231217_023336889.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20231217_023336889.jpg"
+                                alt="Sample PXL_20231217_023336889.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20231217_024507929.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20231217_024507929.jpg"
+                                alt="Sample PXL_20231217_024507929.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240217_203333731.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240217_203333731.jpg"
+                                alt="Sample PXL_20240217_203333731.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240316_170211130.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240316_170211130.jpg"
+                                alt="Sample PXL_20240316_170211130.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240316_190906072.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240316_190906072.jpg"
+                                alt="Sample PXL_20240316_190906072.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240511_162322680.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240511_162322680.jpg"
+                                alt="Sample PXL_20240511_162322680.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240511_165025032.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240511_165025032.jpg"
+                                alt="Sample PXL_20240511_165025032.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240713_182438037.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240713_182438037.jpg"
+                                alt="Sample PXL_20240713_182438037.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240713_191317978.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240713_191317978.jpg"
+                                alt="Sample PXL_20240713_191317978.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240815_171805906.MP~2.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240815_171805906.MP~2.jpg"
+                                alt="Sample PXL_20240815_171805906.MP~2.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240818_014216700.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240818_014216700.jpg"
+                                alt="Sample PXL_20240818_014216700.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240819_144005768.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240819_144005768.jpg"
+                                alt="Sample PXL_20240819_144005768.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240820_124618182.MP.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240820_124618182.MP.jpg"
+                                alt="Sample PXL_20240820_124618182.MP.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20240820_153254284.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240820_153254284.jpg"
+                                alt="Sample PXL_20240820_153254284.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20241019_035355125.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20241019_035355125.jpg"
+                                alt="Sample PXL_20241019_035355125.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20241019_035359625.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20241019_035359625.jpg"
+                                alt="Sample PXL_20241019_035359625.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20241208_020846550.NIGHT.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20241208_020846550.NIGHT.jpg"
+                                alt="Sample PXL_20241208_020846550.NIGHT.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20241208_025511430.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20241208_025511430.jpg"
+                                alt="Sample PXL_20241208_025511430.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20241225_030424082.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20241225_030424082.jpg"
+                                alt="Sample PXL_20241225_030424082.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20241225_031924531.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20241225_031924531.jpg"
+                                alt="Sample PXL_20241225_031924531.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20241225_033128034.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20241225_033128034.jpg"
+                                alt="Sample PXL_20241225_033128034.jpg">
+                        </a>
+                        <a href="./resources/proposal/actual/PXL_20250216_032946778.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20250216_032946778.jpg"
+                                alt="Sample PXL_20250216_032946778.jpg">
+                        </a>
+
+
+                        <a href="./resources/proposal/actual/20240816_133529(0).jpg">
+                            <img src="./resources/proposal/thumbnail/20240816_133529(0).jpg"
+                                alt="Sample PXL_20250216_032946778.jpg">
+                        </a>
+
+                        <a href="./resources/proposal/actual/20240819_092719.jpg">
+                            <img src="./resources/proposal/thumbnail/20240819_092719.jpg"
+                                alt="Sample PXL_20250216_032946778.jpg">
+                        </a>
+
+                        <a href="./resources/proposal/actual/20240820_073120.jpg">
+                            <img src="./resources/proposal/thumbnail/20240820_073120.jpg"
+                                alt="Sample PXL_20250216_032946778.jpg">
+                        </a>
+
+                        <a href="./resources/proposal/actual/IMG_0235.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_0235.jpg"
+                                alt="Sample PXL_20250216_032946778.jpg">
+                        </a>
+
+                        <a href="./resources/proposal/actual/IMG_0846.jpg">
+                            <img src="./resources/proposal/thumbnail/IMG_0846.jpg"
+                                alt="Sample PXL_20250216_032946778.jpg">
+                        </a>
+
+
+                        <a href="./resources/proposal/actual/PXL_20240713_185320825.jpg">
+                            <img src="./resources/proposal/thumbnail/PXL_20240713_185320825.jpg"
+                                alt="Sample PXL_20250216_032946778.jpg">
+                        </a>
 
                     </div>
                 </div>
-            </nav>
+
+                <!-- FAQ-->
+                <div class="tab-pane" id="faq-tab" role="tabpanel" tabindex="0">
+                    <div class="d-lg-none container-lg text-center mt-4">
+                        <h2 class="classy-header header-h2">FAQ</h2>
+                    </div>
+
+                    <div class="container mt-5">
+                        <div class="accordion" id="faqAccordion">
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        When and where will the wedding ceremony take place?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Our wedding ceremony will take place at the Idaho Falls Temple in Idaho on August 30, 2025. Because of the sacred nature of the ordinance, attendance is reserved for endowed members of The Church of Jesus Christ of Latter-day Saints. We warmly invite all our family and friends to join us afterward at our receptions to celebrate together!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Is the temple ceremony open to all guests?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        The temple sealing is a sacred ordinance reserved for endowed members of The
+                                        Church of Jesus Christ of Latter-day Saints. However, we invite all our family
+                                        and friends to join us at the receptions afterward to celebrate together!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Where and when are the receptions?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        August 30, 2025, in Idaho Falls, Idaho, and September 13, 2025, in Kensington,
+                                        Maryland.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        What should I wear?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Dressy casual to semi-formal attire is perfect. Please dress modestly and
+                                        comfortably for a family-friendly celebration.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        Will dinner be served at the reception?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes! A full dinner will be provided at both receptions. We can’t wait to
+                                        celebrate and share a meal with you!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        Can I bring a guest?
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        If your invitation includes a plus-one, you are welcome to bring a guest! Please
+                                        make sure to include them in your RSVP.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        Are children welcome?
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse"
+                                    aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Absolutely! Our receptions are family-friendly, and children are welcome to join
+                                        the celebration.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">
+                                        What time should I arrive?
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse"
+                                    aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Please plan to arrive about 10–15 minutes before the reception start time so you
+                                        have plenty of time to park, settle in, and join the festivities!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingNine">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseNine" aria-expanded="false"
+                                        aria-controls="collapseNine">
+                                        Where are you registered?
+                                    </button>
+                                </h2>
+                                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        You can find our wedding registry by clicking on the "Registry" tab on this
+                                        site!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        When should I RSVP?
+                                    </button>
+                                </h2>
+                                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Formal invitations and RSVP instructions will be sent out soon. Please RSVP as
+                                        soon as you receive yours so we can plan accordingly!
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> 
+                    </div> <!-- end of container for accordion -->
+
+                </div> <!-- end of FAQs-->
+            </div>
+
         </div>
 
-        <!-- <div class="col-12 order-2 order-lg-3 position-relative px-0">
-            <img src="main-home-pic.jpg" class="img-fluid" alt="...">
-        </div> -->
-
-        <div class="tab-content ">
-            <!-- Home -->
-            <div class="tab-pane active" id="home-tab" role="tabpanel" tabindex="0">
-                <div>
-                    <img src="main-home-pic.jpg" class="img-fluid" alt="...">
-                </div>
-
-                <div class="text-center d-block d-lg-none mt-4">
-                    <h2 class="classy-header">
-                        <span class="d-block d-md-inline">NICHOLE</span>
-                        <span class="d-block d-md-inline">&amp;</span>
-                        <span class="d-block d-md-inline">MARTIN</span>
-                    </h2>
-                </div>
-
-            </div> <!-- End of Home -->
-        
-            <!-- RSVP -->
-            <div class="tab-pane" id="rsvp-tab" role="tabpanel" tabindex="0">
-                <div class="d-lg-none container-lg text-center">
-                    <h1 class="classy-header">RSVP</h1>
-                </div>
-            </div>
-        
-            <!-- Registry-->
-            <div class="tab-pane" id="registry-tab" role="tabpanel" tabindex="0">
-                <div class="d-lg-none container-lg text-center">
-                    <h1 class="classy-header">Registry</h1>
-                </div>
-            </div>
-        
-            <!-- Schelude -->
-            <div class="tab-pane" id="schedule-tab" role="tabpanel" tabindex="0">
-                <div class="d-lg-none container-lg text-center">
-                    <h1 class="classy-header">Schelude</h1>
-                </div>
-            </div>
-        
-            <!-- Gallery -->
-            <div class="tab-pane" id="gallery-tab" role="tabpanel" tabindex="0">
-                <div class="d-lg-none container-lg text-center">
-                    <h1 class="classy-header">Gallery</h1>
-                </div>
-                <div class="gallery-container" id="animated-thumbnails-gallery">
-
-                    <a href="./resources/proposal/actual/3T1A5128.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5128.jpg" alt="Sample 3T1A5128.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5189.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5189.jpg" alt="Sample 3T1A5189.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5208.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5208.jpg" alt="Sample 3T1A5208.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5238.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5238.jpg" alt="Sample 3T1A5238.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5271.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5271.jpg" alt="Sample 3T1A5271.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5292.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5292.jpg" alt="Sample 3T1A5292.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5303.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5303.jpg" alt="Sample 3T1A5303.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5305.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5305.jpg" alt="Sample 3T1A5305.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5394.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5394.jpg" alt="Sample 3T1A5394.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5480.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5480.jpg" alt="Sample 3T1A5480.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5500.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5500.jpg" alt="Sample 3T1A5500.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5513-2.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5513-2.jpg" alt="Sample 3T1A5513-2.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5524.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5524.jpg" alt="Sample 3T1A5524.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5541.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5541.jpg" alt="Sample 3T1A5541.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5574.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5574.jpg" alt="Sample 3T1A5574.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5621.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5621.jpg" alt="Sample 3T1A5621.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/3T1A5630.jpg">
-                        <img src="./resources/proposal/thumbnail/3T1A5630.jpg" alt="Sample 3T1A5630.jpg">
-                    </a>
+    </div> <!-- end of container-->
 
 
-                    <a href="./resources/proposal/actual/20240815_141200.jpg">
-                        <img src="./resources/proposal/thumbnail/20240815_141200.jpg" alt="Sample 20240815_141200.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/20240815_142146.jpg">
-                        <img src="./resources/proposal/thumbnail/20240815_142146.jpg" alt="Sample 20240815_142146.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/20240816_133529(0).jpg">
-                        <img src="./resources/proposal/thumbnail/20240816_133529(0).jpg" alt="Sample 20240816_133529(0).jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/20240816_134945.jpg">
-                        <img src="./resources/proposal/thumbnail/20240816_134945.jpg" alt="Sample 20240816_134945.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/20240819_092719.jpg">
-                        <img src="./resources/proposal/thumbnail/20240819_092719.jpg" alt="Sample 20240819_092719.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/20240820_073120.jpg">
-                        <img src="./resources/proposal/thumbnail/20240820_073120.jpg" alt="Sample 20240820_073120.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/20240820_103747.jpg">
-                        <img src="./resources/proposal/thumbnail/20240820_103747.jpg" alt="Sample 20240820_103747.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/20240820_103747~2.jpg">
-                        <img src="./resources/proposal/thumbnail/20240820_103747~2.jpg" alt="Sample 20240820_103747~2.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/20240820_123234.jpg">
-                        <img src="./resources/proposal/thumbnail/20240820_123234.jpg" alt="Sample 20240820_123234.jpg">
-                    </a>
 
-                    <a href="./resources/proposal/actual/FB_IMG_1702276026357.jpg">
-                        <img src="./resources/proposal/thumbnail/FB_IMG_1702276026357.jpg" alt="Sample FB_IMG_1702276026357.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/FB_IMG_1715484377437.jpg">
-                        <img src="./resources/proposal/thumbnail/FB_IMG_1715484377437.jpg" alt="Sample FB_IMG_1715484377437.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/FB_IMG_1715534941473.jpg">
-                        <img src="./resources/proposal/thumbnail/FB_IMG_1715534941473.jpg" alt="Sample FB_IMG_1715534941473.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/FB_IMG_1722132824420.jpg">
-                        <img src="./resources/proposal/thumbnail/FB_IMG_1722132824420.jpg" alt="Sample FB_IMG_1722132824420.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/FB_IMG_1745211564267.jpg">
-                        <img src="./resources/proposal/thumbnail/FB_IMG_1745211564267.jpg" alt="Sample FB_IMG_1745211564267.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG-20240820-WA0003.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG-20240820-WA0003.jpg" alt="Sample IMG-20240820-WA0003.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG-20240820-WA0007.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG-20240820-WA0007.jpg" alt="Sample IMG-20240820-WA0007.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG_20240825_171810.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_20240825_171810.jpg" alt="Sample IMG_20240825_171810.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG_20240825_215434 (1).jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_20240825_215434 (1).jpg" alt="Sample IMG_20240825_215434 (1).jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG_20240825_215436~2.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_20240825_215436~2.jpg" alt="Sample IMG_20240825_215436~2.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG_20241229_160715.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_20241229_160715.jpg" alt="Sample IMG_20241229_160715.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG_20250120_161429.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_20250120_161429.jpg" alt="Sample IMG_20250120_161429.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG_20250120_161432.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_20250120_161432.jpg" alt="Sample IMG_20250120_161432.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG_20250120_161436.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_20250120_161436.jpg" alt="Sample IMG_20250120_161436.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG_20250120_161440.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_20250120_161440.jpg" alt="Sample IMG_20250120_161440.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/IMG_20250120_161443.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_20250120_161443.jpg" alt="Sample IMG_20250120_161443.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20231217_023336889.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20231217_023336889.jpg" alt="Sample PXL_20231217_023336889.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20231217_024507929.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20231217_024507929.jpg" alt="Sample PXL_20231217_024507929.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240217_203333731.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240217_203333731.jpg" alt="Sample PXL_20240217_203333731.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240316_170211130.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240316_170211130.jpg" alt="Sample PXL_20240316_170211130.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240316_190906072.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240316_190906072.jpg" alt="Sample PXL_20240316_190906072.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240511_162322680.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240511_162322680.jpg" alt="Sample PXL_20240511_162322680.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240511_165025032.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240511_165025032.jpg" alt="Sample PXL_20240511_165025032.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240713_182438037.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240713_182438037.jpg" alt="Sample PXL_20240713_182438037.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240713_191317978.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240713_191317978.jpg" alt="Sample PXL_20240713_191317978.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240815_171805906.MP~2.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240815_171805906.MP~2.jpg" alt="Sample PXL_20240815_171805906.MP~2.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240818_014216700.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240818_014216700.jpg" alt="Sample PXL_20240818_014216700.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240819_144005768.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240819_144005768.jpg" alt="Sample PXL_20240819_144005768.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240820_124618182.MP.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240820_124618182.MP.jpg" alt="Sample PXL_20240820_124618182.MP.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20240820_153254284.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240820_153254284.jpg" alt="Sample PXL_20240820_153254284.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20241019_035355125.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20241019_035355125.jpg" alt="Sample PXL_20241019_035355125.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20241019_035359625.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20241019_035359625.jpg" alt="Sample PXL_20241019_035359625.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20241208_020846550.NIGHT.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20241208_020846550.NIGHT.jpg" alt="Sample PXL_20241208_020846550.NIGHT.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20241208_025511430.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20241208_025511430.jpg" alt="Sample PXL_20241208_025511430.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20241225_030424082.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20241225_030424082.jpg" alt="Sample PXL_20241225_030424082.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20241225_031924531.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20241225_031924531.jpg" alt="Sample PXL_20241225_031924531.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20241225_033128034.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20241225_033128034.jpg" alt="Sample PXL_20241225_033128034.jpg">
-                    </a>
-                    <a href="./resources/proposal/actual/PXL_20250216_032946778.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20250216_032946778.jpg" alt="Sample PXL_20250216_032946778.jpg">
-                    </a>
+    <footer class="text-center mt-5 mb-3">
+        <small class="text-muted">Website created by Martin J Quito.</small>
+    </footer>
 
+    <script type="text/javascript">
+        function activateTab(tabId) {
+            // Hide any open offcanvas menu
+            var offcanvasElement = $('#navbarOffcanvasLg')[0];
+            var bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement) || new bootstrap.Offcanvas(offcanvasElement);
+            bsOffcanvas.hide();
 
-                    <a href="./resources/proposal/actual/20240816_133529(0).jpg">
-                        <img src="./resources/proposal/thumbnail/20240816_133529(0).jpg" alt="Sample PXL_20250216_032946778.jpg">
-                    </a>
+            // Activate the tab
+            $('.tab-pane').removeClass('active show');
+            $(tabId).addClass('active show');
 
-                    <a href="./resources/proposal/actual/20240819_092719.jpg">
-                        <img src="./resources/proposal/thumbnail/20240819_092719.jpg" alt="Sample PXL_20250216_032946778.jpg">
-                    </a>
-
-                    <a href="./resources/proposal/actual/20240820_073120.jpg">
-                        <img src="./resources/proposal/thumbnail/20240820_073120.jpg" alt="Sample PXL_20250216_032946778.jpg">
-                    </a>
-
-                    <a href="./resources/proposal/actual/IMG_0235.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_0235.jpg" alt="Sample PXL_20250216_032946778.jpg">
-                    </a>
-
-                    <a href="./resources/proposal/actual/IMG_0846.jpg">
-                        <img src="./resources/proposal/thumbnail/IMG_0846.jpg" alt="Sample PXL_20250216_032946778.jpg">
-                    </a>
-                    
-                    
-                    <a href="./resources/proposal/actual/PXL_20240713_185320825.jpg">
-                        <img src="./resources/proposal/thumbnail/PXL_20240713_185320825.jpg" alt="Sample PXL_20250216_032946778.jpg">
-                    </a>
-                    
-                </div>
-            </div>
-        
-            <!-- FAQ-->
-            <div class="tab-pane" id="faq-tab" role="tabpanel" tabindex="0">
-                <div class="d-lg-none container-lg text-center">
-                    <h1 class="classy-header">FAQ</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div> <!-- end of container-->
-
-
-<script type="text/javascript">
-
-$(document).ready(function() {
-    $('#offcanvas-menu .nav-link').on('click', function () {
-        var offcanvasElement = $('#navbarOffcanvasLg')[0];
-        var bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement) || new bootstrap.Offcanvas(offcanvasElement);
-        bsOffcanvas.hide();
-    });
-
-    $("#animated-thumbnails-gallery")
-    .justifiedGallery({
-        captions: false,
-        // lastRow: "hide",
-        rowHeight: 200,
-        margins: 5
-    })
-    .on("jg.complete", function () {
-        window.lightGallery(
-            document.getElementById("animated-thumbnails-gallery"),
-            {
-                // autoplayFirstVideo: false,
-                // pager: false,
-                // galleryId: "nature",
-                plugins: [lgZoom, lgThumbnail],
-                mobileSettings: {
-                    controls: false,
-                    showCloseIcon: true,
-                    download: true,
-                    rotate: false
+            // Update active menu link
+            $('#offcanvas-menu .nav-link').removeClass('active');
+            $('#offcanvas-menu .nav-link').each(function () {
+                if ($(this).attr('data-bs-target') === tabId) {
+                    $(this).addClass('active');
                 }
-            }
-        );
-    });
-});
+            });
+        }
 
-</script>
+        $(document).ready(function () {
+
+            // Make side menu clicks work (already in your old code, but safer here)
+            $('#offcanvas-menu .nav-link').on('click', function () {
+                var offcanvasElement = $('#navbarOffcanvasLg')[0];
+                var bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement) || new bootstrap.Offcanvas(offcanvasElement);
+                bsOffcanvas.hide();
+            });
+
+            // Hook up the mobile buttons
+            $('.main-links-mobile a').on('click', function (e) {
+                e.preventDefault();
+
+                var text = $(this).text().trim().toLowerCase();
+
+                if (text === 'rsvp') {
+                    activateTab('#rsvp-tab');
+                } else if (text === 'registry') {
+                    activateTab('#registry-tab');
+                }
+            });           
+
+            // Initialize lightGallery
+            $("#animated-thumbnails-gallery")
+                .justifiedGallery({
+                    captions: false,
+                    // lastRow: "hide",
+                    rowHeight: 200,
+                    margins: 5
+                })
+                .on("jg.complete", function () {
+                    window.lightGallery(
+                        document.getElementById("animated-thumbnails-gallery"),
+                        {
+                            // autoplayFirstVideo: false,
+                            // pager: false,
+                            // galleryId: "nature",
+                            plugins: [lgZoom, lgThumbnail],
+                            mobileSettings: {
+                                controls: false,
+                                showCloseIcon: true,
+                                download: true,
+                                rotate: false
+                            }
+                        }
+                    );
+                });
+        });
+
+    </script>
+
+
 </body>
 
 </html>
